@@ -32,6 +32,8 @@ public class Ball : MonoBehaviour
         {
             counter++;
             GetComponent<Renderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+            float newSize = Random.Range(lowerSizeCap, upperSizeCap);
+            this.GetComponent<Transform>().localScale = new Vector3(newSize, newSize, newSize);
         }
     }
 
